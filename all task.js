@@ -41,3 +41,16 @@ function isBestFriend(f1, f2) {
   if (f1.bestFriend === f2.roll && f2.bestFriend === f1.roll) return true;
   return false;
 }
+
+function calculateWatchTime(times) {
+  let totalSec = 0;
+  for (const val of times) {
+    if (typeof val !== "number") return "Invalid";
+    totalSec += val;
+  }
+  let h = Math.floor(totalSec / 3600),
+    m = Math.floor((totalSec % 3600) / 60),
+    s = totalSec % 60;
+
+  return { hour: h, minute: m, second: s };
+}
