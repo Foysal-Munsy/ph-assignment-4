@@ -1,10 +1,10 @@
 function cashOut(money) {
-  if (typeof money !== "number" || money < 0) return "Invalid";
+  if (typeof money !== "number" || money < 0) return '"Invalid"';
   return (money * 1.75) / 100;
 }
 
 function validEmail(email) {
-  if (typeof email !== "string") return "Invalid";
+  if (typeof email !== "string") return '"Invalid"';
 
   const first_char = email[0];
   if (
@@ -24,7 +24,7 @@ function validEmail(email) {
 }
 
 function electionResult(votes) {
-  if (!Array.isArray(votes)) return "Invalid";
+  if (!Array.isArray(votes)) return '"Invalid"';
   let mango = 0,
     banana = 0;
   for (const str of votes) {
@@ -36,7 +36,7 @@ function electionResult(votes) {
 }
 
 function isBestFriend(f1, f2) {
-  if (typeof f1 !== "object" || typeof f2 !== "object") return "Invalid";
+  if (typeof f1 !== "object" || typeof f2 !== "object") return '"Invalid"';
 
   if (f1.bestFriend === f2.roll && f2.bestFriend === f1.roll) return true;
   return false;
@@ -45,7 +45,7 @@ function isBestFriend(f1, f2) {
 function calculateWatchTime(times) {
   let totalSec = 0;
   for (const val of times) {
-    if (typeof val !== "number") return "Invalid";
+    if (typeof val !== "number") return '"Invalid"';
     totalSec += val;
   }
   let h = Math.floor(totalSec / 3600),

@@ -1,5 +1,5 @@
 function validEmail(email) {
-  if (typeof email !== "string") return "Invalid";
+  if (typeof email !== "string") return '"Invalid"';
 
   const first_char = email[0];
   if (

@@ -1,7 +1,7 @@
 function calculateWatchTime(times) {
   let totalSec = 0;
   for (const val of times) {
-    if (typeof val !== "number") return "Invalid";
+    if (typeof val !== "number") return '"Invalid"';
     totalSec += val;
   }
   let h = Math.floor(totalSec / 3600),

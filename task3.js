@@ -1,5 +1,5 @@
 function electionResult(votes) {
-  if (!Array.isArray(votes)) return "Invalid";
+  if (!Array.isArray(votes)) return '"Invalid"';
   let mango = 0,
     banana = 0;
   for (const str of votes) {
