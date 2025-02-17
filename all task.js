@@ -22,3 +22,15 @@ function validEmail(email) {
 
   return true;
 }
+
+function electionResult(votes) {
+  if (!Array.isArray(votes)) return "Invalid";
+  let mango = 0,
+    banana = 0;
+  for (const str of votes) {
+    if (str === "mango") mango++;
+    else if (str === "banana") banana++;
+    else continue;
+  }
+  return mango === banana ? "Draw" : mango > banana ? "Mango" : "Banana";
+}
